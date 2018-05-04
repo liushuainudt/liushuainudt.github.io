@@ -12,7 +12,7 @@
     
     <title>
         
-            أرشيف: 2018 | 
+            特征工程流程及常用的方法 | 
         
         liushuai&#39;s note
     </title>
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://liushuainudt.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="أرشيف: 2018 | liushuai&#39;s note">
+    <meta property="og:title" content="特征工程流程及常用的方法 | liushuai&#39;s note">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="liushuai&#39;s personal blog">
     
 
     
+        <meta property="article:published_time" content="May 04, 2018" />
+        <meta property="article:modified_time" content="May 04, 2018" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="أرشيف: 2018 | liushuai&#39;s note">
+    <meta name="twitter:title" content="特征工程流程及常用的方法 | liushuai&#39;s note">
     <meta name="twitter:description" content="liushuai&#39;s personal blog">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://liushuainudt.github.io/archives/2018/index.html" />
+        <link rel="canonical" href="http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "liushuai&#39;s note",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Shuai Liu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "headline": "特征工程流程及常用的方法",
+    "url": "http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html",
+    "datePublished": "May 04, 2018",
+    "dateModified": "May 04, 2018",
+    "description": "liushuai&#39;s personal blog",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://liushuainudt.github.io"
+    }
+}
+</script>
 
 
     
@@ -279,155 +312,289 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据挖掘通用场景："><span class="post-toc-number">1.</span> <span class="post-toc-text">数据挖掘通用场景：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征分类"><span class="post-toc-number">2.</span> <span class="post-toc-text">特征分类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征可用性评估"><span class="post-toc-number">3.</span> <span class="post-toc-text">特征可用性评估</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征获取"><span class="post-toc-number">4.</span> <span class="post-toc-text">特征获取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征存储"><span class="post-toc-number">5.</span> <span class="post-toc-text">特征存储</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#计算特征"><span class="post-toc-number">6.</span> <span class="post-toc-text">计算特征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征处理理"><span class="post-toc-number">7.</span> <span class="post-toc-text">特征处理理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征类型"><span class="post-toc-number">8.</span> <span class="post-toc-text">特征类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征处理"><span class="post-toc-number">9.</span> <span class="post-toc-text">特征处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征选择"><span class="post-toc-number">10.</span> <span class="post-toc-text">特征选择</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征降维"><span class="post-toc-number">11.</span> <span class="post-toc-text">特征降维</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特征有效性分析"><span class="post-toc-number">12.</span> <span class="post-toc-text">特征有效性分析</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/04/特征工程流程及常用的方法/">特征工程流程及常用的方法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/04/特征工程流程及常用的方法/" target="_self">واصل القراءة</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Shuai Liu's avatar">
-            </div>
-            <div>
-                <strong>Shuai Liu</strong>
-                <span>May 04, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/29/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/29/hello-world/" target="_self">واصل القراءة</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Shuai Liu's avatar">
-            </div>
-            <div>
-                <strong>Shuai Liu</strong>
-                <span>Apr 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                特征工程流程及常用的方法
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Shuai Liu</strong>
+        <span>May 04, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=特征工程流程及常用的方法&url=http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=特征工程流程及常用的方法&url=http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html&via=Shuai Liu" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://liushuainudt.github.io/2018/05/04/特征工程流程及常用的方法/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="数据挖掘通用场景："><a href="#数据挖掘通用场景：" class="headerlink" title="数据挖掘通用场景："></a>数据挖掘通用场景：</h3><p><img src="/images/数据挖掘.jpg" alt="数据挖掘普通流程"></p>
+<blockquote>
+<p> Data and features determine the upper limit of machine learning, while models and algorithms only approach this upper limit.</p>
+</blockquote>
+<p>[TOC]</p>
+<h3 id="特征分类"><a href="#特征分类" class="headerlink" title="特征分类"></a>特征分类</h3><ul>
+<li>个⼈人信息</li>
+<li>个⼈人征信报告</li>
+<li>信⽤用卡信息</li>
+<li>淘宝／京东订单信息</li>
+<li>地理理位置信息</li>
+<li>⼿手机应⽤用列列表</li>
+<li>快递信息</li>
+<li>短信内容</li>
+<li>微信聊天记录</li>
+</ul>
+<h3 id="特征可用性评估"><a href="#特征可用性评估" class="headerlink" title="特征可用性评估"></a>特征可用性评估</h3><ul>
+<li>获取难度<br>  第三⽅方独有数据，难以获得聊天记录</li>
+<li>覆盖率<br>  产品覆盖⼈人群有限－信⽤用卡账单</li>
+<li>准确率<br>  数据源准确率低－数据经过多次交易易，数据容易易被篡改－⼿手机IP地址</li>
+</ul>
+<h3 id="特征获取"><a href="#特征获取" class="headerlink" title="特征获取"></a>特征获取</h3><ul>
+<li><p>产品直接抓取</p>
+</li>
+<li><p>⽤用户授权数据</p>
+</li>
+<li><p>第三⽅方数据公司</p>
+</li>
+</ul>
+<h3 id="特征存储"><a href="#特征存储" class="headerlink" title="特征存储"></a>特征存储</h3><ul>
+<li>HBase</li>
+<li>HDFS</li>
+<li>MySQL</li>
+<li>Kudu<h3 id="计算特征"><a href="#计算特征" class="headerlink" title="计算特征"></a>计算特征</h3></li>
+<li>Kafka</li>
+<li>Spark Streaming</li>
+</ul>
+<h3 id="特征处理理"><a href="#特征处理理" class="headerlink" title="特征处理理"></a>特征处理理</h3><ul>
+<li>特征清洗<br>  清洗异常样本</li>
+<li>数据采样<br>  • 上采样<pre><code>• 过拟合，需要加⼊入随机噪声等
+</code></pre>  • 下采样<pre><code>• 容易易丢失样本信息
+</code></pre>  • 惩罚权重<pre><code>• ⼩小样本权重⾼高，⼤大样本权重低
+</code></pre>  • 集成模型<h3 id="特征类型"><a href="#特征类型" class="headerlink" title="特征类型"></a>特征类型</h3></li>
+<li>基本特征：时间空间等</li>
+<li>统计特征： 最⼤大值，最⼩小值，中位数</li>
+<li>组合特征： 时间＊空间</li>
+<li>⾮非结构化数据： 图像</li>
+</ul>
+<h3 id="特征处理"><a href="#特征处理" class="headerlink" title="特征处理"></a>特征处理</h3><ul>
+<li>标准化<br>  Z标准化，标准化后均值为0，⽅方差为1</li>
+<li>归⼀一化<br>  将特征归⼀一化到[0,1] • 最⼤大最⼩小归⼀一化，排序归⼀一化等</li>
+<li>特征分桶<br>  连续变量量离散化， 根据业务确定桶的阈值</li>
+<li>特征编码<br>  离散特征进⾏行行one hot编码</li>
+<li>缺失值计算<br>  删除<br>  • 填补<br>  • 替代<br>  • 均值，中位数，众数，随机数（e.g. 通话时⻓长）<br>  • 特殊值（e.g.⼿手机品牌）<br>  • 近似替代（K近邻）<br>  • 模型预测<pre><code>• 利利⽤用其他变量量做模型进⾏行行缺失变量量的预测
+</code></pre>  • 不处理<pre><code>• 特殊值代替缺失值
+• 引⼊入虚拟变量量
+</code></pre><h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3></li>
+<li>完全搜索</li>
+<li>启发式搜索</li>
+<li>随机搜索</li>
+</ul>
+<h3 id="特征降维"><a href="#特征降维" class="headerlink" title="特征降维"></a>特征降维</h3><ul>
+<li>特征维度过⾼高的问题<br>  • 计算量量⼤大<br>  • 训练时间⻓长</li>
+<li>特征降维的⽅方法<br>  • PCA, LDA<br>  • Embedding<br>  • 例例⼦子：⼿手机品牌one hot编码后⼤大概有1000维特征，⽤用PCA压缩到100维</li>
+</ul>
+<h3 id="特征有效性分析"><a href="#特征有效性分析" class="headerlink" title="特征有效性分析"></a>特征有效性分析</h3><ul>
+<li>与模型相关特征权重<br> • 评估模型中各个特征的权重<br> • 权重越⾼高，特征重要性越⾼高</li>
+<li>与模型⽆无关特征权重<br>  • 分析特征与label的相关性<br>  • 相关性越强，特征重要性越⾼高</li>
+<li>重要特征监控<br>  • 模型的表现随着时间推移⽽而下降<br>  • 系统漏漏洞洞等问题会造成坏⽤用户批量量涌⼊入<br>  • 监控报警，服务降级，避免损失</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/04/29/hello-world/" id="post_nav-older" class="next-content">
+            أقدم
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
